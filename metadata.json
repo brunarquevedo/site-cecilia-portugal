@@ -1,0 +1,6 @@
+{
+  "name": "Dra Cecília Portugal",
+  "description": "Acompanhamento médico e terapêutico para parar de fumar - Dra Cecília Portugal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
