@@ -1,5 +1,6 @@
 import WaveDivider from "./WaveDivider";
 import { WHATSAPP_URL } from "../constants";
+import { fotoCecilia } from "../assets/images";
 
 export default function HeroSection() {
   return (
@@ -51,7 +52,7 @@ export default function HeroSection() {
 
               <div className="relative rounded-xl overflow-hidden shadow-lg border border-[#DDD5C6]/80 bg-[#EEE8DA]">
                 <img
-                  src="/src/assets/images/foto_cecilia.jpg"
+                  src={fotoCecilia}
                   alt="Dra Cecília Portugal"
                   className="w-full h-[450px] sm:h-[550px] object-cover object-center transform hover:scale-[1.01] transition-transform duration-700"
                   referrerPolicy="no-referrer"

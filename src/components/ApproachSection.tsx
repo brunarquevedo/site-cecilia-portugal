@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { fotoAcompanhamento } from "../assets/images";
 
 export default function ApproachSection() {
   const listItems = [
@@ -61,7 +62,7 @@ export default function ApproachSection() {
             <div className="relative w-full h-full rounded-lg overflow-hidden shadow-lg border border-[#DDD5C6]">
               {/* Main Image */}
               <img
-                src="/src/assets/images/foto_acompanhamento.jpg"
+                src={fotoAcompanhamento}
                 alt="Dra Cecília Portugal em seu consultório"
                 className="w-full h-full object-cover object-center min-h-[380px]"
                 referrerPolicy="no-referrer"

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import WhatsAppIcon from "./WhatsAppIcon";
 import { WHATSAPP_URL } from "../constants";
+import { logo } from "../assets/images";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,7 +24,7 @@ export default function Header() {
           className="text-center group flex flex-col items-center mb-2 sm:mb-2.5 tracking-wide transition-opacity hover:opacity-90"
         >
           <img
-            src="/src/assets/images/logo.png"
+            src={logo}
             alt="Dra Cecília Portugal"
             className="h-11 sm:h-14 md:h-16 w-auto object-contain"
           />

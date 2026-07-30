@@ -1,10 +1,11 @@
 import { WHATSAPP_URL } from "../constants";
+import { fotoCecilia, therapyRoom, detailDecor } from "../assets/images";
 
 export default function ServicesSection() {
   const cards = [
     {
       title: "Como começa o acompanhamento?",
-      image: "/src/assets/images/detail_decor_1785334264234.jpg",
+      image: detailDecor,
       paragraphs: [
         "O primeiro passo é uma consulta individual de avaliação, com duração aproximada de 50 minutos.",
         "Nesse encontro, busco compreender a relação da pessoa com o cigarro, seu estado de saúde, suas tentativas anteriores, seus gatilhos e sua motivação para a mudança.",
@@ -13,7 +14,7 @@ export default function ServicesSection() {
     },
     {
       title: "Um percurso de três meses",
-      image: "/src/assets/images/foto_cecilia.jpg",
+      image: fotoCecilia,
       paragraphs: [
         "Para quem está pronto para parar de fumar, o tratamento é estruturado ao longo de três meses, com encontros semanais.",
         "Nesse percurso, trabalhamos a preparação para a mudança, o início da vida sem o cigarro e a consolidação de novas estratégias para lidar com a fissura, os hábitos, as emoções e as situações de risco.",
@@ -22,7 +23,7 @@ export default function ServicesSection() {
     },
     {
       title: "Individual ou em grupo",
-      image: "/src/assets/images/therapy_room_1785334227896.jpg",
+      image: therapyRoom,
       paragraphs: [
         "O acompanhamento pode ser individual ou em grupos pequenos, com até cinco participantes.",
         "No individual, o processo é totalmente direcionado às necessidades de cada pessoa.",

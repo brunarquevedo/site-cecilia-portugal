@@ -1,4 +1,5 @@
 import { whatsappUrl } from "../constants";
+import { sobreMim, livroTronco } from "../assets/images";
 
 export default function AboutSection() {
   return (
@@ -20,7 +21,7 @@ export default function AboutSection() {
               {/* Main taller portrait */}
               <div className="relative z-10 w-4/5 ml-auto rounded-lg overflow-hidden shadow-md border-4 border-[#F7F4EC]">
                 <img
-                  src="/src/assets/images/sobre_mim.jpg"
+                  src={sobreMim}
                   alt="Dra Cecília Portugal em seu consultório"
                   className="w-full h-[400px] sm:h-[480px] object-cover object-center"
                   referrerPolicy="no-referrer"
@@ -30,7 +31,7 @@ export default function AboutSection() {
               {/* Smaller overlapping offset image */}
               <div className="absolute -bottom-8 -left-2 sm:-left-6 z-20 w-3/5 rounded-lg overflow-hidden shadow-xl border-4 border-[#F7F4EC]">
                 <img
-                  src="/src/assets/images/livro_tronco.jpg"
+                  src={livroTronco}
                   alt="Livro Memórias de uma ex-futura fumante"
                   className="w-full h-[220px] sm:h-[260px] object-cover object-center"
                   referrerPolicy="no-referrer"

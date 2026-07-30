@@ -1,4 +1,5 @@
 import { whatsappUrl } from "../constants";
+import { logo, sobreMim, therapyRoom } from "../assets/images";
 
 export default function SupportSection() {
   return (
@@ -13,7 +14,7 @@ export default function SupportSection() {
               {/* Brand mark, offset to the left of the text column */}
               <div className="lg:pl-16">
                 <img
-                  src="/src/assets/images/logo.png"
+                  src={logo}
                   alt="Dra Cecília Portugal"
                   className="h-24 sm:h-28 lg:h-32 w-auto object-contain"
                 />
@@ -52,7 +53,7 @@ export default function SupportSection() {
               <div className="mt-10 lg:hidden">
                 <div className="w-32 aspect-3/4 rounded-xs overflow-hidden border-[6px] border-[#F7F4EC] shadow-sm">
                   <img
-                    src="/src/assets/images/sobre_mim.jpg"
+                    src={sobreMim}
                     alt="Dra Cecília Portugal"
                     className="w-full h-full object-cover object-center"
                     referrerPolicy="no-referrer"
@@ -66,7 +67,7 @@ export default function SupportSection() {
               <div className="w-full max-w-[420px] bg-[#F7F4EC] p-2.5 shadow-sm">
                 <div className="aspect-3/4 overflow-hidden">
                   <img
-                    src="/src/assets/images/therapy_room_1785334227896.jpg"
+                    src={therapyRoom}
                     alt="Ambiente calmo e acolhedor"
                     className="w-full h-full object-cover object-center"
                     referrerPolicy="no-referrer"
@@ -81,7 +82,7 @@ export default function SupportSection() {
           <div className="hidden lg:block absolute left-10 bottom-0 translate-y-1/4 w-36 xl:w-40">
             <div className="aspect-3/4 overflow-hidden border-[6px] border-[#F7F4EC] shadow-sm">
               <img
-                src="/src/assets/images/sobre_mim.jpg"
+                src={sobreMim}
                 alt="Dra Cecília Portugal"
                 className="w-full h-full object-cover object-center"
                 referrerPolicy="no-referrer"

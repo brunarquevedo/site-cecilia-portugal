@@ -7,6 +7,7 @@ import {
   WHATSAPP_DISPLAY,
   WHATSAPP_URL,
 } from "../constants";
+import { logo } from "../assets/images";
 
 export default function Footer() {
   return (
@@ -33,7 +34,7 @@ export default function Footer() {
           {/* Column 2: Logo Monogram / Navigation */}
           <div className="flex flex-col items-center justify-center space-y-4">
             <img
-              src="/src/assets/images/logo.png"
+              src={logo}
               alt="Dra Cecília Portugal"
               className="h-20 w-auto object-contain"
             />

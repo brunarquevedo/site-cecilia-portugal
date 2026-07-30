@@ -1,4 +1,5 @@
 import { whatsappUrl } from "../constants";
+import { therapyRoom } from "../assets/images";
 
 export default function FinalCtaSection() {
   return (
@@ -6,7 +7,7 @@ export default function FinalCtaSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/therapy_room_1785334227896.jpg"
+          src={therapyRoom}
           alt="Consultório e acolhimento"
           className="w-full h-full object-cover object-center filter brightness-[0.85]"
           referrerPolicy="no-referrer"

@@ -1,4 +1,5 @@
 import { BOOK_TITLE, BOOK_URL } from "../constants";
+import { ceciliaLivro } from "../assets/images";
 
 export default function BookSection() {
   return (
@@ -14,7 +15,7 @@ export default function BookSection() {
 
               <div className="relative rounded-lg overflow-hidden shadow-xl border-2 border-[#DDD5C6] bg-[#F7F4EC]">
                 <img
-                  src="/src/assets/images/cecilia_livro.jpg"
+                  src={ceciliaLivro}
                   alt={`Dra Cecília Portugal com o livro ${BOOK_TITLE}`}
                   className="w-full h-[450px] sm:h-[550px] object-cover object-center"
                   referrerPolicy="no-referrer"

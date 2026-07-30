@@ -1,3 +1,5 @@
+import { logo } from "../assets/images";
+
 export default function StatementSection() {
   return (
     <section className="bg-[#F7F4EC] py-16 sm:py-20 md:py-28 relative overflow-hidden">
@@ -5,7 +7,7 @@ export default function StatementSection() {
         {/* Emblem logo mark above */}
         <div className="flex justify-center">
           <img
-            src="/src/assets/images/logo.png"
+            src={logo}
             alt="Dra Cecília Portugal"
             className="h-32 sm:h-40 md:h-44 w-auto object-contain"
           />
