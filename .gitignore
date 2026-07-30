@@ -6,3 +6,9 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Material de trabalho local (nao vai para o repo publico)
+conteudo/
+fotos /
+identidade visual/
+.claude/

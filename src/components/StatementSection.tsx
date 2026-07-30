@@ -4,15 +4,16 @@ export default function StatementSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 sm:space-y-10">
         {/* Emblem logo mark above */}
         <div className="flex justify-center">
-          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-[#8A936F]/40 flex flex-col items-center justify-center p-2 bg-[#EEE8DA]/50 shadow-xs">
-            <span className="font-serif text-xs tracking-widest text-[#6F7758]">DRA</span>
-            <span className="font-serif text-lg font-light text-[#5C5853] -mt-1">CP</span>
-          </div>
+          <img
+            src="/src/assets/images/logo.png"
+            alt="Dra Cecília Portugal"
+            className="h-32 sm:h-40 md:h-44 w-auto object-contain"
+          />
         </div>
 
         {/* Small subtitle label */}
         <p className="font-sans text-xs uppercase tracking-[0.25em] text-[#8A936F] font-medium">
-          DOES THIS SOUND FAMILIAR? • ACOMPANHAMENTO ESPECIALIZADO
+          ACOMPANHAMENTO ESPECIALIZADO
         </p>
 
         {/* Main statement */}
@@ -26,7 +27,7 @@ export default function StatementSection() {
             O cigarro pode estar ligado à dependência física da nicotina, mas também às emoções, aos hábitos, à rotina e às situações vividas no dia a dia. Por isso, o tratamento precisa considerar a pessoa por inteiro.
           </p>
           <p>
-            Como Médica de Família e Comunidade e Terapeuta Ocupacional, ofereço um acompanhamento clínico, emocional e comportamental, construído a partir da história, das necessidades e do momento de cada pessoa.
+            Como médica de família e comunidade e terapeuta ocupacional, ofereço um acompanhamento clínico, emocional e comportamental, construído a partir da história, das necessidades e do momento de cada pessoa.
           </p>
         </div>
 

@@ -2,10 +2,11 @@ import { Check } from "lucide-react";
 
 export default function ApproachSection() {
   const listItems = [
-    "Como começa o acompanhamento?",
-    "Um percurso de três meses",
-    "Atendimento individual ou em grupo",
-    "Suporte durante o tratamento",
+    "Consulta de avaliação individual (50 min)",
+    "Percurso estruturado de três meses, com encontros semanais",
+    "Formato individual ou grupo com até 5 participantes",
+    "Suporte por WhatsApp em horário comercial",
+    "Avaliação da necessidade de apoio medicamentoso",
   ];
 
   return (
@@ -25,16 +26,16 @@ export default function ApproachSection() {
               
               <div className="space-y-3 pt-2 text-[#EEE8DA]/90 font-light text-base sm:text-lg leading-relaxed">
                 <p>
-                  Atendimentos online, individual ou em grupo, com acompanhamento semanal durante 3 meses.
-                </p>
-                <p>
-                  A minha proposta são atendimentos online, individual ou em grupo, com acompanhamento semanal durante 3 meses.
+                  Atendimentos online, individuais ou em grupo, com encontros semanais ao longo de 3 meses.
                 </p>
               </div>
             </div>
 
             {/* Checkmark List */}
             <div className="space-y-3.5 border-t border-white/20 pt-6">
+              <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-[#EEE8DA]/80 font-medium">
+                O que está incluído
+              </p>
               {listItems.map((item, idx) => (
                 <div key={idx} className="flex items-center space-x-3 text-sm sm:text-base font-light tracking-wide text-white">
                   <div className="w-5 h-5 rounded-full border border-white/60 flex items-center justify-center shrink-0 bg-white/10">
@@ -58,23 +59,13 @@ export default function ApproachSection() {
           {/* Right Side: Editorial Overlapping Images */}
           <div className="lg:col-span-6 relative flex items-center min-h-[380px] sm:min-h-[480px]">
             <div className="relative w-full h-full rounded-lg overflow-hidden shadow-lg border border-[#DDD5C6]">
-              {/* Main Room Image */}
+              {/* Main Image */}
               <img
-                src="/src/assets/images/therapy_room_1785334227896.jpg"
-                alt="Ambiente de consulta acolhedor"
+                src="/src/assets/images/foto_acompanhamento.jpg"
+                alt="Dra Cecília Portugal em seu consultório"
                 className="w-full h-full object-cover object-center min-h-[380px]"
                 referrerPolicy="no-referrer"
               />
-
-              {/* Overlapping portrait thumbnail in reference image style */}
-              <div className="absolute bottom-6 left-6 w-36 sm:w-48 rounded-md overflow-hidden border-2 border-white shadow-xl hidden sm:block">
-                <img
-                  src="/src/assets/images/hero_portrait_1785334196187.jpg"
-                  alt="Dra Cecília Portugal"
-                  className="w-full h-44 sm:h-56 object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
             </div>
           </div>
 

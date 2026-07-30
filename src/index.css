@@ -1,6 +1,18 @@
 @import "tailwindcss";
 
 @layer base {
+  /* Compensa a altura do header fixo ao navegar pelas âncoras */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      scroll-padding-top: 10rem;
+    }
+  }
+
   :root {
     --font-serif: 'Cormorant Garamond', Georgia, serif;
     --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;

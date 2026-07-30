@@ -4,6 +4,7 @@ import StatementSection from "./components/StatementSection";
 import AboutSection from "./components/AboutSection";
 import ApproachSection from "./components/ApproachSection";
 import ServicesSection from "./components/ServicesSection";
+import GroupSection from "./components/GroupSection";
 import SupportSection from "./components/SupportSection";
 import BookSection from "./components/BookSection";
 import NarrativesSection from "./components/NarrativesSection";
@@ -23,6 +24,7 @@ export default function App() {
         <AboutSection />
         <ApproachSection />
         <ServicesSection />
+        <GroupSection />
         <SupportSection />
         <BookSection />
         <NarrativesSection />

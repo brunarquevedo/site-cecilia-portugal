@@ -1,11 +1,13 @@
 import { useState, FormEvent } from "react";
 import { CheckCircle2, Send } from "lucide-react";
+import { EMAIL, EMAIL_URL, WHATSAPP_DISPLAY, WHATSAPP_URL } from "../constants";
 
 export default function ContactFormSection() {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     nome: "",
     email: "",
+    whatsapp: "",
     mensagem: "",
   });
 
@@ -29,7 +31,25 @@ export default function ContactFormSection() {
             Alguma dúvida?
           </h2>
           <p className="font-sans text-base text-[#5C5853]/80 font-light max-w-lg mx-auto">
-            Preencha os campos abaixo para enviar sua mensagem ou tirar dúvidas sobre o acompanhamento.
+            Prefere escrever? Deixe sua mensagem que eu respondo pessoalmente.
+          </p>
+          <p className="font-sans text-sm text-[#5C5853]/70 font-light max-w-lg mx-auto">
+            Se preferir, fale direto comigo no{" "}
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#6F7758] font-medium underline hover:text-[#5C5853] transition-colors"
+            >
+              WhatsApp {WHATSAPP_DISPLAY}
+            </a>{" "}
+            ou por e-mail:{" "}
+            <a
+              href={EMAIL_URL}
+              className="text-[#6F7758] font-medium underline hover:text-[#5C5853] transition-colors"
+            >
+              {EMAIL}
+            </a>
           </p>
         </div>
 
@@ -44,12 +64,21 @@ export default function ContactFormSection() {
                 Mensagem enviada com sucesso!
               </h3>
               <p className="font-sans text-sm text-[#5C5853]/80 font-light max-w-md mx-auto">
-                Obrigada pelo contato, {formData.nome}. Entrarei em contato em breve para responder suas dúvidas.
+                Obrigada pelo contato, {formData.nome}. Respondo em breve. Se for urgente, me chame no{" "}
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#6F7758] font-medium underline hover:text-[#5C5853] transition-colors"
+                >
+                  WhatsApp
+                </a>
+                .
               </p>
               <button
                 onClick={() => {
                   setSubmitted(false);
-                  setFormData({ nome: "", email: "", mensagem: "" });
+                  setFormData({ nome: "", email: "", whatsapp: "", mensagem: "" });
                 }}
                 className="inline-block mt-4 text-xs font-sans uppercase tracking-widest text-[#8A936F] hover:text-[#6F7758] underline font-medium"
               >
@@ -84,6 +113,20 @@ export default function ContactFormSection() {
                   placeholder="seuemail@exemplo.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full bg-[#EEE8DA]/60 border border-[#DDD5C6] rounded-sm px-4 py-3 text-sm text-[#5C5853] placeholder-[#5C5853]/50 focus:outline-none focus:border-[#8A936F] focus:ring-1 focus:ring-[#8A936F] transition-all"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label htmlFor="whatsapp" className="block font-sans text-xs uppercase tracking-widest text-[#5C5853] font-medium">
+                  WhatsApp <span className="text-[#5C5853]/50 normal-case tracking-normal">(opcional)</span>
+                </label>
+                <input
+                  id="whatsapp"
+                  type="tel"
+                  placeholder="(00) 00000-0000"
+                  value={formData.whatsapp}
+                  onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
                   className="w-full bg-[#EEE8DA]/60 border border-[#DDD5C6] rounded-sm px-4 py-3 text-sm text-[#5C5853] placeholder-[#5C5853]/50 focus:outline-none focus:border-[#8A936F] focus:ring-1 focus:ring-[#8A936F] transition-all"
                 />
               </div>

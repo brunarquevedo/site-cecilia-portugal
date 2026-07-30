@@ -1,3 +1,5 @@
+import { WHATSAPP_URL } from "../constants";
+
 export default function ServicesSection() {
   const cards = [
     {
@@ -11,7 +13,7 @@ export default function ServicesSection() {
     },
     {
       title: "Um percurso de três meses",
-      image: "/src/assets/images/about_portrait_1785334212859.jpg",
+      image: "/src/assets/images/foto_cecilia.jpg",
       paragraphs: [
         "Para quem está pronto para parar de fumar, o tratamento é estruturado ao longo de três meses, com encontros semanais.",
         "Nesse percurso, trabalhamos a preparação para a mudança, o início da vida sem o cigarro e a consolidação de novas estratégias para lidar com a fissura, os hábitos, as emoções e as situações de risco.",
@@ -19,13 +21,13 @@ export default function ServicesSection() {
       ],
     },
     {
-      title: "Atendimento individual ou em grupo",
+      title: "Individual ou em grupo",
       image: "/src/assets/images/therapy_room_1785334227896.jpg",
       paragraphs: [
-        "O acompanhamento pode ser realizado de forma individual ou em grupos pequenos, com até cinco participantes.",
-        "No atendimento individual, o processo é direcionado às necessidades particulares de cada pessoa.",
-        "No grupo, os participantes encontram espaço para compartilhar experiências, dificuldades e conquistas com outras pessoas que livem um processo semelhante, além de contar com uma modalidade de investimento mais acessível.",
-        "Em ambos os formatos, o tratamento segue a mesma proposta de cuidado e acompanhamento ao longo dos três meses.",
+        "O acompanhamento pode ser individual ou em grupos pequenos, com até cinco participantes.",
+        "No individual, o processo é totalmente direcionado às necessidades de cada pessoa.",
+        "No grupo, os participantes compartilham experiências, dificuldades e conquistas com quem vive um processo semelhante — e o investimento é mais acessível.",
+        "Em ambos os formatos, o cuidado e o acompanhamento seguem os mesmos três meses.",
       ],
     },
   ];
@@ -37,14 +39,11 @@ export default function ServicesSection() {
         {/* Section Header */}
         <div className="text-center space-y-2 mb-16 sm:mb-20">
           <p className="font-sans text-xs uppercase tracking-[0.25em] text-[#8A936F] font-medium">
-            THERAPY SERVICES • ETAPAS DO CUIDADO
+            ETAPAS DO CUIDADO
           </p>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#5C5853] font-normal tracking-tight">
-            Acompanhamento para parar de fumar
+            Como funciona o acompanhamento
           </h2>
-          <span className="font-script text-2xl sm:text-3xl text-[#8A936F] block pt-1">
-            Ways We Can Work Together
-          </span>
         </div>
 
         {/* 3 Vertical Cards Grid */}
@@ -81,10 +80,12 @@ export default function ServicesSection() {
               {/* Bottom CTA Button inside card */}
               <div className="pt-4 text-center">
                 <a
-                  href="#duvidas"
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block bg-[#8A936F] hover:bg-[#6F7758] text-white px-6 py-2.5 rounded-sm font-sans uppercase text-[11px] tracking-widest font-medium transition-colors duration-200"
                 >
-                  Saiba mais
+                  Quero saber mais
                 </a>
               </div>
             </div>
