@@ -21,9 +21,9 @@ export default function App() {
       <Header />
       <main>
         <HeroSection />
+        <DifferentialsSection />
         <StatementSection />
         <AboutSection />
-        <DifferentialsSection />
         <ApproachSection />
         <ServicesSection />
         <GroupSection />
