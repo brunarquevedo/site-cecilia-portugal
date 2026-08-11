@@ -1,0 +1,554 @@
+/* ============================================================================
+   Layout: Header, Navigation, Footer
+   ============================================================================ */
+
+/* ============================================================================
+   SKIP LINK (accessibility first element)
+   ============================================================================ */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: var(--color-moss);
+  color: var(--color-white);
+  padding: var(--space-12) var(--space-16);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ============================================================================
+   HEADER
+   ============================================================================ */
+
+header {
+  position: relative;
+  z-index: 100;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-base), border-bottom-color var(--transition-base);
+}
+
+/* Header on Home hero: transparent over the image */
+header.hero-header {
+  background-color: transparent;
+  border-bottom: none;
+}
+
+/* Header after scroll or on other pages */
+header.scrolled,
+header.standard-header {
+  background-color: var(--color-cream);
+  border-bottom: 1px solid var(--color-olive-30);
+}
+
+.header-container {
+  max-width: var(--container-max);
+  width: 100%;
+  padding: 0 var(--space-16);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+@media (min-width: var(--bp-md)) {
+  .header-container {
+    padding: 0 var(--space-24);
+  }
+}
+
+/* ============================================================================
+   LOGO
+   ============================================================================ */
+
+.logo {
+  flex-shrink: 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+}
+
+.logo-text {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-moss);
+}
+
+/* ============================================================================
+   NAVIGATION (Desktop)
+   ============================================================================ */
+
+nav {
+  display: none;
+  flex-direction: row;
+  gap: var(--space-32);
+  align-items: center;
+}
+
+@media (min-width: var(--bp-lg)) {
+  nav {
+    display: flex;
+  }
+}
+
+nav a {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 400;
+  color: var(--color-graphite);
+  position: relative;
+  padding-bottom: 4px;
+  transition: color var(--transition-base);
+}
+
+nav a:hover {
+  color: var(--color-moss);
+}
+
+nav a[aria-current="page"] {
+  color: var(--color-moss);
+  border-bottom: 1px solid var(--color-olive);
+}
+
+nav a:not([aria-current="page"])::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-olive);
+  transition: width var(--transition-fast);
+}
+
+nav a:not([aria-current="page"]):hover::after {
+  width: 100%;
+}
+
+/* ============================================================================
+   PRIMARY CTA (in header)
+   ============================================================================ */
+
+.header-cta {
+  display: none;
+  padding: var(--space-12) var(--space-24);
+  border: 1px solid var(--color-olive);
+  color: var(--color-olive);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-base);
+}
+
+@media (min-width: var(--bp-lg)) {
+  .header-cta {
+    display: inline-block;
+  }
+}
+
+.header-cta:hover {
+  background-color: var(--color-olive);
+  color: var(--color-white);
+}
+
+.header-cta:focus-visible {
+  outline: 2px solid var(--color-olive);
+  outline-offset: 2px;
+}
+
+/* ============================================================================
+   MOBILE MENU TOGGLE
+   ============================================================================ */
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 44px;
+  height: 44px;
+  padding: var(--space-8);
+  margin-right: -var(--space-8);
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--transition-base);
+}
+
+@media (min-width: var(--bp-lg)) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover {
+  opacity: 0.7;
+}
+
+.menu-toggle span {
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-graphite);
+  border-radius: 1px;
+  transition: all var(--transition-base);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* ============================================================================
+   MOBILE MENU (Full-screen overlay)
+   ============================================================================ */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.mobile-menu[aria-hidden="false"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-32);
+  width: 100%;
+  padding: 0 var(--space-16);
+}
+
+.mobile-menu nav a {
+  font-size: var(--text-2xl);
+  font-family: var(--font-serif);
+  color: var(--color-moss);
+}
+
+.mobile-menu .menu-close {
+  position: absolute;
+  top: var(--space-16);
+  right: var(--space-16);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--text-2xl);
+  color: var(--color-graphite);
+}
+
+.mobile-menu .menu-cta {
+  margin-top: var(--space-32);
+  padding: var(--space-16) var(--space-32);
+  background-color: var(--color-moss);
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-base);
+}
+
+.mobile-menu .menu-cta:hover {
+  background-color: var(--color-olive);
+}
+
+/* Prevent body scroll when menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* ============================================================================
+   FOOTER
+   ============================================================================ */
+
+footer {
+  background-color: var(--color-moss);
+  color: var(--color-white);
+  padding: var(--space-80) var(--space-16) var(--space-48);
+  margin-top: auto;
+}
+
+@media (min-width: var(--bp-md)) {
+  footer {
+    padding: var(--space-80) var(--space-24) var(--space-48);
+  }
+}
+
+.footer-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-48);
+  margin-bottom: var(--space-64);
+}
+
+@media (min-width: var(--bp-md)) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--space-32);
+  }
+}
+
+/* Footer section: Logo & tagline */
+.footer-branding {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.footer-branding .logo {
+  height: 48px;
+}
+
+.footer-branding .logo img {
+  filter: brightness(0) invert(1);
+}
+
+.footer-branding .titles {
+  font-size: var(--text-sm);
+  line-height: var(--lh-relaxed);
+  opacity: 0.9;
+}
+
+.footer-branding .registrations {
+  font-size: var(--text-xs);
+  line-height: var(--lh-normal);
+  opacity: 0.8;
+  margin-top: var(--space-12);
+}
+
+/* Footer section: Navigation */
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.footer-nav a {
+  font-size: var(--text-base);
+  color: var(--color-white);
+  opacity: 0.95;
+  transition: opacity var(--transition-base);
+}
+
+.footer-nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Footer section: Contact & Legal */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.footer-contact a {
+  font-size: var(--text-base);
+  color: var(--color-white);
+  opacity: 0.95;
+  transition: opacity var(--transition-base);
+}
+
+.footer-contact a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--space-16);
+  margin-top: var(--space-12);
+}
+
+.footer-social a {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-lg);
+  transition: opacity var(--transition-base);
+}
+
+.footer-social a:hover {
+  opacity: 0.8;
+}
+
+/* Footer bottom: Copyright */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: var(--space-32);
+  text-align: center;
+  font-size: var(--text-sm);
+  opacity: 0.8;
+}
+
+/* ============================================================================
+   MAIN LAYOUT
+   ============================================================================ */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ============================================================================
+   SECTIONS (common spacing pattern)
+   ============================================================================ */
+
+section {
+  position: relative;
+  padding: var(--space-80) var(--space-16);
+}
+
+@media (min-width: var(--bp-md)) {
+  section {
+    padding: var(--space-110) var(--space-24);
+  }
+}
+
+section.section-compact {
+  padding: var(--space-56) var(--space-16);
+}
+
+@media (min-width: var(--bp-md)) {
+  section.section-compact {
+    padding: var(--space-72) var(--space-24);
+  }
+}
+
+/* Background modifiers */
+section.bg-cream {
+  background-color: var(--color-cream);
+}
+
+section.bg-sand {
+  background-color: var(--color-sand);
+}
+
+section.bg-sage {
+  background-color: var(--color-sage);
+}
+
+section.bg-moss {
+  background-color: var(--color-moss);
+  color: var(--color-white);
+}
+
+section.bg-moss h1,
+section.bg-moss h2,
+section.bg-moss h3,
+section.bg-moss h4,
+section.bg-moss h5,
+section.bg-moss h6 {
+  color: var(--color-white);
+}
+
+section.bg-white {
+  background-color: var(--color-white);
+}
+
+/* ============================================================================
+   DECORATIVE ELEMENTS
+   ============================================================================ */
+
+/* Hairline rule */
+.rule {
+  width: var(--space-64);
+  height: 1px;
+  background-color: var(--color-olive-30);
+  margin: 0 auto var(--space-32);
+}
+
+.rule.rule-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rule.rule-white {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Two-column divider */
+.divider-vertical {
+  display: none;
+  width: 1px;
+  height: 100%;
+  background-color: var(--color-olive-30);
+}
+
+@media (min-width: var(--bp-md)) {
+  .divider-vertical {
+    display: block;
+  }
+}
+
+/* Horizontal divider (mobile) */
+.divider-horizontal {
+  display: block;
+  height: 1px;
+  background-color: var(--color-olive-30);
+  margin: var(--space-32) 0;
+}
+
+@media (min-width: var(--bp-md)) {
+  .divider-horizontal {
+    display: none;
+  }
+}

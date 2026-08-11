@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import StatementSection from "./components/StatementSection";
 import AboutSection from "./components/AboutSection";
+import DifferentialsSection from "./components/DifferentialsSection";
 import ApproachSection from "./components/ApproachSection";
 import ServicesSection from "./components/ServicesSection";
 import GroupSection from "./components/GroupSection";
@@ -22,6 +23,7 @@ export default function App() {
         <HeroSection />
         <StatementSection />
         <AboutSection />
+        <DifferentialsSection />
         <ApproachSection />
         <ServicesSection />
         <GroupSection />

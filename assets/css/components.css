@@ -1,0 +1,543 @@
+/* ============================================================================
+   Component Styles: Buttons, Forms, Cards, Accordions
+   ============================================================================ */
+
+/* ============================================================================
+   BUTTONS
+   ============================================================================ */
+
+.btn {
+  display: inline-block;
+  padding: var(--space-12) var(--space-24);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-olive);
+  outline-offset: 2px;
+}
+
+/* Button: Primary (solid moss) */
+.btn-primary {
+  background-color: var(--color-moss);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-olive);
+}
+
+.btn-primary:active {
+  background-color: var(--color-moss);
+  opacity: 0.9;
+}
+
+/* Button: Secondary (outline) */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-olive);
+  border: 1px solid var(--color-olive);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-olive);
+  color: var(--color-white);
+}
+
+/* Button: Inverted (on dark background) */
+.btn-inverted {
+  background-color: var(--color-cream);
+  color: var(--color-moss);
+}
+
+.btn-inverted:hover {
+  background-color: var(--color-white);
+}
+
+/* Button: Text link style */
+.btn-text {
+  background: none;
+  border: none;
+  color: var(--color-olive);
+  font-weight: 600;
+  padding: 0;
+  font-size: var(--text-base);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.btn-text:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Button: Small size */
+.btn-sm {
+  padding: var(--space-8) var(--space-16);
+  font-size: var(--text-sm);
+}
+
+/* Button: Large size */
+.btn-lg {
+  padding: var(--space-16) var(--space-32);
+  font-size: var(--text-lg);
+}
+
+/* Button: Full width */
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* Button: With icon (arrow) */
+.btn-with-arrow::after {
+  content: "→";
+  display: inline-block;
+  margin-left: var(--space-8);
+  transition: transform var(--transition-base);
+}
+
+.btn-text:hover .btn-with-arrow::after {
+  transform: translateX(4px);
+}
+
+/* ============================================================================
+   FORM ELEMENTS
+   ============================================================================ */
+
+.form-group {
+  margin-bottom: var(--space-24);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-graphite);
+  margin-bottom: var(--space-8);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  width: 100%;
+  padding: var(--space-12) var(--space-16);
+  font-size: var(--text-base);
+  border: 1px solid var(--color-sage);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-white);
+  color: var(--color-graphite);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-olive);
+  box-shadow: 0 0 0 3px rgba(138, 147, 111, 0.1);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: var(--font-sans);
+}
+
+/* Form error state */
+.form-group.error input,
+.form-group.error textarea {
+  border-color: var(--color-burnt-rose);
+}
+
+.form-group.error input:focus,
+.form-group.error textarea:focus {
+  box-shadow: 0 0 0 3px rgba(217, 162, 154, 0.1);
+}
+
+.form-error {
+  font-size: var(--text-sm);
+  color: var(--color-burnt-rose);
+  margin-top: var(--space-8);
+  display: none;
+}
+
+.form-group.error .form-error {
+  display: block;
+}
+
+/* Form success message */
+.form-success {
+  padding: var(--space-16);
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-24);
+  display: none;
+}
+
+.form-success.show {
+  display: block;
+}
+
+/* Form loading state */
+.form-loading .btn-primary {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* ============================================================================
+   ACCORDION / COLLAPSIBLE
+   ============================================================================ */
+
+.accordion {
+  border-top: 1px solid var(--color-olive-30);
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--color-olive-30);
+}
+
+.accordion-header {
+  background: none;
+  border: none;
+  width: 100%;
+  padding: var(--space-24) 0;
+  text-align: left;
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-moss);
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-16);
+  transition: color var(--transition-base);
+}
+
+.accordion-header:hover {
+  color: var(--color-olive);
+}
+
+.accordion-header h3 {
+  margin: 0;
+  flex: 1;
+  font-size: var(--text-xl);
+}
+
+.accordion-chevron {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  stroke: var(--color-olive);
+  stroke-width: 1.25;
+  transition: transform var(--transition-base);
+}
+
+.accordion-item[open] .accordion-chevron {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  padding: 0 0 var(--space-24) 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--lh-loose);
+  color: var(--color-graphite);
+}
+
+.accordion-content p {
+  margin-bottom: var(--space-12);
+}
+
+.accordion-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Using native <details> element */
+details {
+  margin-bottom: 0;
+}
+
+details summary {
+  cursor: pointer;
+  padding: var(--space-24) 0;
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-moss);
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-16);
+  transition: color var(--transition-base);
+  border-bottom: 1px solid var(--color-olive-30);
+}
+
+details summary:hover {
+  color: var(--color-olive);
+}
+
+details summary::marker {
+  display: none;
+}
+
+details summary h3 {
+  margin: 0;
+  flex: 1;
+}
+
+details summary::after {
+  content: "∨";
+  flex-shrink: 0;
+  font-size: var(--text-2xl);
+  color: var(--color-olive);
+  transition: transform var(--transition-base);
+}
+
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+details[open] summary {
+  color: var(--color-olive);
+}
+
+/* ============================================================================
+   IMAGE STYLES
+   ============================================================================ */
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Aspect ratio containers */
+.aspect-4-5 {
+  aspect-ratio: 4 / 5;
+}
+
+.aspect-3-4 {
+  aspect-ratio: 3 / 4;
+}
+
+.aspect-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+/* Image with subtle shadow */
+.image-elevated img {
+  box-shadow: var(--shadow-sm);
+}
+
+/* ============================================================================
+   TEXT LINKS
+   ============================================================================ */
+
+a.link {
+  color: var(--color-olive);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-olive-30);
+  transition: border-bottom-color var(--transition-base), color var(--transition-base);
+}
+
+a.link:hover {
+  color: var(--color-moss);
+  border-bottom-color: var(--color-moss);
+}
+
+a.link:focus-visible {
+  outline: 2px solid var(--color-olive);
+  outline-offset: 2px;
+}
+
+/* ============================================================================
+   CREDENTIAL STRIP / FACT BOXES
+   ============================================================================ */
+
+.credentials-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-24);
+  padding: var(--space-56) var(--space-16);
+  background-color: var(--color-sage);
+}
+
+@media (min-width: var(--bp-md)) {
+  .credentials-list {
+    gap: var(--space-16);
+    padding: var(--space-56) var(--space-24);
+  }
+}
+
+.credential-item {
+  font-size: var(--text-sm);
+  line-height: var(--lh-relaxed);
+  color: var(--color-graphite);
+  border-right: 1px solid var(--color-olive-30);
+  padding-right: var(--space-24);
+}
+
+.credential-item:last-child {
+  border-right: none;
+}
+
+@media (max-width: calc(var(--bp-md) - 1px)) {
+  .credential-item {
+    border-right: none;
+    border-bottom: 1px solid var(--color-olive-30);
+    padding-right: 0;
+    padding-bottom: var(--space-24);
+  }
+
+  .credential-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+/* Registrations line */
+.registrations-line {
+  font-size: var(--text-xs);
+  color: var(--color-graphite);
+  margin-top: var(--space-24);
+  padding-top: var(--space-24);
+  border-top: 1px solid var(--color-olive-30);
+  text-align: center;
+}
+
+/* ============================================================================
+   CARE JOURNEY GRAPHIC (SVG)
+   ============================================================================ */
+
+.care-journey {
+  width: 100%;
+  max-width: 100%;
+  margin: var(--space-48) 0;
+}
+
+@media (min-width: var(--bp-md)) {
+  .care-journey {
+    margin: var(--space-64) 0;
+  }
+}
+
+.care-journey svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================================================
+   TWO-COLUMN LAYOUT
+   ============================================================================ */
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-32);
+  align-items: center;
+}
+
+@media (min-width: var(--bp-md)) {
+  .two-column {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-48);
+  }
+}
+
+.two-column.ratio-5-7 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: var(--bp-md)) {
+  .two-column.ratio-5-7 {
+    grid-template-columns: 5fr 7fr;
+  }
+}
+
+.two-column.reversed {
+  direction: rtl;
+}
+
+.two-column.reversed > * {
+  direction: ltr;
+}
+
+/* ============================================================================
+   PLACEHOLDER BLOCKS (for missing images/content)
+   ============================================================================ */
+
+.placeholder-block {
+  background-color: var(--color-sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-graphite);
+  font-size: var(--text-sm);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  padding: var(--space-32);
+}
+
+/* ============================================================================
+   UTILITY: SPACING FOR FLEX/GRID
+   ============================================================================ */
+
+.gap-16 {
+  gap: var(--space-16);
+}
+
+.gap-24 {
+  gap: var(--space-24);
+}
+
+.gap-32 {
+  gap: var(--space-32);
+}
+
+.gap-48 {
+  gap: var(--space-48);
+}

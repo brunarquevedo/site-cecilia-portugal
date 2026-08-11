@@ -1,0 +1,13 @@
+# robots.txt - Search Engine Optimization
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*.php
+Disallow: /.*
+
+# Sitemap
+Sitemap: https://TODO-DOMAIN-HERE.com/sitemap.xml
+
+# Crawl delay (optional)
+# Crawl-delay: 1

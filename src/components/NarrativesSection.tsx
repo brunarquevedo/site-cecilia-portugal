@@ -9,7 +9,7 @@ export default function NarrativesSection() {
             NARRATIVAS
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white font-normal tracking-tight">
-            2006
+            2004
           </h2>
           <div className="w-12 h-[1px] bg-[#F1ECE8]/70 mx-auto mt-4"></div>
         </div>
@@ -17,7 +17,7 @@ export default function NarrativesSection() {
         {/* Reading Article Body */}
         <div className="border border-[#F1ECE8]/30 p-8 sm:p-12 md:p-16 rounded-md space-y-6 text-base sm:text-lg text-[#F1ECE8] font-light leading-relaxed">
           <p className="first-letter:font-serif first-letter:text-4xl first-letter:float-left first-letter:mr-3 first-letter:text-white">
-            2006 foi, com certeza, um ano inesquecível na minha vida, com muitas conquistas. E, entre elas, estava a certeza de que eu era uma ex-fumante. Eu mesma não acreditava que conseguiria. E só eu sei o quanto essa conquista tem significado na minha vida.
+            2004 foi, com certeza, um ano inesquecível na minha vida, com muitas conquistas. E, entre elas, estava a certeza de que eu era uma ex-fumante. Eu mesma não acreditava que conseguiria — pois já tinha se passado quase dois anos sem fumar. E só eu sei o quanto essa conquista tem significado na minha vida.
           </p>
           <p>
             Passei minha adolescência com muitos conflitos, como uma adolescente típica. Me diverti bastante, vivi várias experiências com a intensidade da juventude, incontáveis momentos de alegria — mas também tive o lado das lágrimas, das decepções e dos erros, principalmente dos erros.
@@ -32,7 +32,7 @@ export default function NarrativesSection() {
             Sempre tive a sensação de que havia uma força dentro de mim, que me perturbava. Foram anos de terapia…
           </p>
           <p>
-            E o que esse desabafo tem a ver com o cigarro e com 2006? Foi justamente todo o processo de conseguir parar de fumar que me deixou segura, que me trouxe uma felicidade que transbordava, uma confiança em mim mesma. Sempre que sinto alguma forma de insegurança ou fragilidade, é dessa vitória que me lembro — e é dela que tiro forças para não fraquejar.
+            E o que esse desabafo tem a ver com o cigarro e com 2004? Foi justamente todo o processo de conseguir parar de fumar que me deixou segura, que me trouxe uma felicidade que transbordava, uma confiança em mim mesma. Sempre que sinto alguma forma de insegurança ou fragilidade, é dessa vitória que me lembro — e é dela que tiro forças para não fraquejar.
           </p>
         </div>
 

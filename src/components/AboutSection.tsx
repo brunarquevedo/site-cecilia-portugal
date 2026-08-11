@@ -60,7 +60,7 @@ export default function AboutSection() {
                 Depois me formei em medicina, em 2013, e me mudei para o Rio de Janeiro para a residência em medicina de família e comunidade — a área onde encontrei mais sentido no meu dia a dia. Foram mais de dez anos no território de Manguinhos, cuidando das mesmas pessoas e famílias ao longo do tempo. Nesse período fiz o mestrado em Saúde da Família na FIOCRUZ e fui preceptora do programa de residência da UFRJ/ENSP, acompanhando a formação de médicos que também queriam exercer um cuidado comprometido e acolhedor.
               </p>
               <p>
-                Mas sempre senti falta da TO. Depois de anos dedicada à medicina de família, encontrei a forma de reunir as duas: um projeto de cuidado para quem quer parar de fumar. E essa escolha tem raízes na minha própria história — o cigarro fez parte da minha vida até 2006, e eu só consegui deixá-lo com ajuda. É daí que vem a minha convicção de que esse caminho é difícil, mas totalmente possível.
+                Mas sempre senti falta da TO. Depois de anos dedicada à medicina de família, encontrei a forma de reunir as duas: um projeto de cuidado para quem quer parar de fumar. E essa escolha tem raízes na minha própria história — o cigarro fez parte da minha vida até 2004, e eu só consegui deixá-lo com ajuda. É daí que vem a minha convicção de que esse caminho é difícil, mas totalmente possível.
               </p>
             </div>
 

@@ -22,7 +22,7 @@ export default function FinalCtaSection() {
         </span>
 
         <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-[#5C5853] font-normal leading-snug tracking-tight">
-          Vamos conversar por 30 minutos?
+          Vamos conversar por 15 minutos?
         </h2>
 
         <p className="font-sans text-sm sm:text-base text-[#5C5853]/80 font-light max-w-lg mx-auto">
@@ -32,7 +32,7 @@ export default function FinalCtaSection() {
         <div className="pt-2 space-y-3">
           <a
             href={whatsappUrl(
-              "Olá, Dra. Cecília! Vi o site e gostaria de agendar uma conversa de 30 minutos."
+              "Olá, Dra. Cecília! Vi o site e gostaria de agendar uma conversa de 15 minutos."
             )}
             target="_blank"
             rel="noopener noreferrer"

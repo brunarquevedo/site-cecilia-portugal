@@ -1,0 +1,244 @@
+/* ============================================================================
+   Animations & Transitions
+   ============================================================================ */
+
+/* ============================================================================
+   FADE & RISE (scroll entrance)
+   ============================================================================ */
+
+@keyframes fadeRise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-rise {
+  animation: fadeRise 600ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.fade-rise.delay-1 {
+  animation-delay: 80ms;
+}
+
+.fade-rise.delay-2 {
+  animation-delay: 160ms;
+}
+
+.fade-rise.delay-3 {
+  animation-delay: 240ms;
+}
+
+.fade-rise.delay-4 {
+  animation-delay: 320ms;
+}
+
+/* ============================================================================
+   FADE IN (simple fade)
+   ============================================================================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 600ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.fade-in.delay-1 {
+  animation-delay: 80ms;
+}
+
+.fade-in.delay-2 {
+  animation-delay: 160ms;
+}
+
+.fade-in.delay-3 {
+  animation-delay: 240ms;
+}
+
+/* ============================================================================
+   SCALE (for images)
+   ============================================================================ */
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1.02);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.scale-up {
+  animation: scaleUp 900ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================================
+   DRAW PATH (SVG paths drawing)
+   ============================================================================ */
+
+@keyframes drawPath {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.draw-path {
+  animation: drawPath 900ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+/* ============================================================================
+   PULSE (subtle pulsing)
+   ============================================================================ */
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* ============================================================================
+   SLIDE IN (from sides)
+   ============================================================================ */
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 600ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.slide-in-right {
+  animation: slideInRight 600ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* ============================================================================
+   HOVER EFFECTS
+   ============================================================================ */
+
+.hover-lift {
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-base);
+}
+
+.hover-glow {
+  transition: box-shadow var(--transition-base);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 0 3px rgba(138, 147, 111, 0.15);
+}
+
+/* ============================================================================
+   TEXT UNDERLINE ANIMATION
+   ============================================================================ */
+
+.underline-animate {
+  position: relative;
+  text-decoration: none;
+}
+
+.underline-animate::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-olive);
+  transition: width var(--transition-fast);
+}
+
+.underline-animate:hover::after {
+  width: 100%;
+}
+
+/* ============================================================================
+   OPACITY TRANSITIONS
+   ============================================================================ */
+
+.transition-opacity {
+  transition: opacity var(--transition-base);
+}
+
+.transition-colors {
+  transition: color var(--transition-base), background-color var(--transition-base), border-color var(--transition-base);
+}
+
+.transition-all {
+  transition: all var(--transition-base);
+}
+
+/* ============================================================================
+   RESPECT PREFERS-REDUCED-MOTION
+   ============================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* Still show instant state changes */
+  .fade-rise,
+  .fade-in,
+  .scale-up,
+  .draw-path,
+  .slide-in-left,
+  .slide-in-right {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

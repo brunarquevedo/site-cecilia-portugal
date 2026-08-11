@@ -26,7 +26,7 @@ export default function Header() {
           <img
             src={logo}
             alt="Dra Cecília Portugal"
-            className="h-11 sm:h-14 md:h-16 w-auto object-contain"
+            className="h-16 sm:h-20 md:h-24 w-auto object-contain"
           />
           <span className="text-[10px] sm:text-xs font-sans uppercase tracking-[0.25em] text-[#8A936F] mt-1 font-medium">
             Médica de Família e Comunidade • Terapeuta Ocupacional

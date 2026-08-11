@@ -62,7 +62,7 @@ export default function BookSection() {
                 O livro começa no início dessa dependência, na adolescência. Divido toda a dificuldade que foi parar de fumar — com ajuda profissional, em um grupo terapêutico — e todos esses anos de reafirmação da minha escolha pela vida, lutando contra recaídas.
               </p>
               <p>
-                Quem me conhece sabe o quanto o cigarro ainda me acompanha, mesmo tendo parado há 20 anos. Todos os dias eu reafirmo que não posso fumar.
+                Quem me conhece sabe o quanto o cigarro ainda me acompanha, mesmo tendo parado há 22 anos. Todos os dias eu reafirmo que não posso fumar.
               </p>
               <p className="font-medium text-[#5C5853]">
                 E parar de fumar me trouxe tantas coisas boas. É muito bom poder dividir essa história com você.
